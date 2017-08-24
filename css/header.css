@@ -1,0 +1,316 @@
+/*.header{
+	width: 100%;
+	height: 80px;
+	background: orange;
+	position: fixed;
+	top: 0px;
+
+}*/
+
+.right-inner-addon {
+    position: relative;
+     top:20px;
+     padding: 10px;
+}
+.right-inner-addon input {
+    padding-left: 20px; 
+
+}
+.right-inner-addon i {
+    position: absolute;
+    left: 0px;
+  padding: 20px;
+    pointer-events: none;
+}
+body{
+    font-family: 'Lato', sans-serif;
+    background: #f7f7f4;
+}
+ .carousel-caption {
+  z-index: 10;
+}
+.text-center{
+    text-align: center;
+    margin: 1.25rem 0;
+    border-bottom: 1px solid #dadada;
+    padding: 1.25rem 0;
+}
+ 
+.col-md-3{
+    margin: 1.25rem 0;
+}
+ 
+@media screen and (max-width: 34em) {
+  .col-sm-6{
+    margin-left: 1.25rem;
+}
+ 
+}
+/*back to top button*/
+#myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: red; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+}
+
+#myBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+}
+/* back to top ends*/
+
+/*fitting image size in block*/
+.container1 { 
+    width: 200px; 
+    height: 200px; 
+    overflow: hidden; 
+}
+.container1 img { 
+    width: 100%;
+}
+/*ends here*/
+/*hover for courses*/
+.ch-grid {
+  margin: 20px 0 0 0;
+  padding: 0;
+  list-style: none;
+  display: block;
+  text-align: center;
+  width: 100%;
+}
+
+.ch-grid:after,
+.ch-item:before {
+  content: '';
+    display: table;
+}
+
+.ch-grid:after {
+  clear: both;
+}
+
+.ch-grid li {
+  width: 220px;
+  height: 220px;
+  display: inline-block;
+  margin: 20px;
+}
+
+/*effects*/
+.ch-item {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  position: relative;
+  cursor: default;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+.ch-thumb {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  position: absolute;
+  box-shadow: inset 0 0 0 15px rgba(255,255,255, 0.5);
+  transform-origin: 95% 40%;
+  transition: all 0.3s ease-in-out;
+}
+.ch-thumb:after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  border-radius: 50%;
+  top: 40%;
+  left: 95%;
+  margin: -4px 0 0 -4px;
+  background: radial-gradient(ellipse at center, rgba(14,14,14,1) 0%,rgba(125,126,125,1) 100%);
+  box-shadow: 0 0 1px rgba(255,255,255,0.9);
+}
+.ch-img-1 { 
+  background-color: white;
+  background-image: url(../image/elastic.png);
+  z-index: 12;
+}
+
+.ch-img-2 { 
+  background-image: url("../image/mapr.png");
+  z-index: 11;
+}
+
+.ch-img-3 { 
+  background-image: url(../image/java.png);
+  z-index: 10;
+}
+.ch-info {
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  border-radius: 50%;
+  overflow: hidden;
+  background:  url(../image/hive.png);
+  box-shadow: inset 0 0 0 5px rgba(0,0,0,0.05);
+}
+.ch-info h3 {
+  color: black;
+  text-transform: uppercase;
+  position: relative;
+  letter-spacing: 2px;
+  font-size: 18px;
+  margin: 0 60px;
+  padding: 22px 0 0 0;
+  height: 85px;
+  font-family: 'Open Sans', Arial, sans-serif;
+  text-shadow: 
+    0 0 1px #fff, 
+    0 1px 2px rgba(0,0,0,0.3);
+}
+
+.ch-info p {
+  color: #fff;
+  padding: 10px 5px;
+  font-style: italic;
+  margin: 0 30px;
+  font-size: 12px;
+  border-top: 1px solid rgba(255,255,255,0.5);
+}
+.ch-info p a {
+  display: block;
+  color: #333;
+  width: 80px;
+  height: 80px;
+  background: rgba(255,255,255,0.3);
+  border-radius: 50%;
+  color: #fff;
+  font-style: normal;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 9px;
+  letter-spacing: 1px;
+  padding-top: 24px;
+  margin: 7px auto 0;
+  font-family: 'Open Sans', Arial, sans-serif;
+  opacity: 0;
+  transition: 
+    transform 0.3s ease-in-out 0.2s,
+    opacity 0.3s ease-in-out 0.2s,
+    background 0.2s linear 0s;
+  transform: translateX(60px) rotate(90deg);
+}
+
+.ch-info p a:hover {
+  background: rgba(255,255,255,0.5);
+}
+.ch-item:hover .ch-thumb {
+  box-shadow: inset 0 0 0 15px rgba(255,255,255, 0.5), 0 1px 3px rgba(0,0,0,0.2);
+  transform: rotate(-110deg);
+}
+.ch-item:hover .ch-info p a{
+  opacity: 1;
+  transform: translateX(0px) rotate(0deg);
+}
+/*hover ends*/
+
+/* add padding  */
+
+.navbar-custom {
+  
+    background-color: white;
+}
+
+
+
+#slides_control > div{
+  height: 200px;
+}
+img{
+ 
+  width: 100%;
+}
+#slides_control {
+  position:absolute;
+  width: 400px;
+  left:50%;
+  top:20px;
+ margin-left:-200px;
+}
+.search:focus {
+    width: 100%;
+}
+
+/* for search*/
+input[type=text] {
+    width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+    width: 100%;
+}
+/* search ends*/
+/*.navigation{
+	text-decoration: none;
+	font-family: serif;
+	color: green;
+	position: absolute;
+	right: 30px;
+	margin: 15px;
+	word-spacing: 10px;
+	font-size: 25px;
+}*/
+/*.navigation:hover{
+	text-decoration: none;
+	font-family: Cambria, serif;
+	font-size: 30px;
+	font-style: normal;
+	font-weight: normal;
+	text-transform: normal;
+	letter-spacing: normal;
+	line-height: 1.3em;
+	color: #000;
+} */
+
+/*navigation effect*/
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+body {
+  margin: 0px;
+}
+
+#nav-1 {
+  background: #3fa46a;
+}
+.link-1 {
+  transition: 0.3s ease;
+  background: #5175C0;
+  color: #ffffff;
+  font-size: 15px;
+  text-decoration: none;
+  border-top: 4px solid #3fa46a;
+  border-bottom: 4px solid #3fa46a;
+  padding: 10px 0;
+  top:15px;
+  margin: 0 20px;
+}
+.link-1:hover {
+  border-top: 4px solid #ffffff;
+  border-bottom: 4px solid #ffffff;
+  padding: 6px 0; 
+}
